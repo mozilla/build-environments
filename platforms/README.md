@@ -1,1 +1,1 @@
-Basic images: CentOS installs pointed at Mozilla repos, with no build specific libraries.
+Basic images: CentOS 6 pointed at Mozilla repos, with no build specific libraries.
