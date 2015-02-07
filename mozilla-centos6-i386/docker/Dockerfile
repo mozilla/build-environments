@@ -2,11 +2,12 @@ FROM centos:6
 
 MAINTAINER Morgan Reece Phillips winter2718@gmail.com
 
+# Setup mozilla repositories
 ADD yum.conf /etc/yum.conf
-ADD CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo
 
-RUN yum update -y
-RUN yum install -y bash\
+RUN yum -x make update -y
+# Prefixing with `linux32` ensures that anything new we get is 32-bit
+RUN linux32 yum install -y bash\
     bzip2\
     coreutils\
     cpio\
@@ -23,7 +24,6 @@ RUN yum install -y bash\
     grep\
     gzip\
     info\
-    make\
     patch\
     redhat-rpm-config\
     rpm-build\

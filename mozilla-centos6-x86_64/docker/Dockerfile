@@ -2,6 +2,7 @@ FROM centos:6
 
 MAINTAINER Morgan Reece Phillips winter2718@gmail.com
 
+# Setup Mozilla repositories
 ADD yum.conf /etc/yum.conf
 ADD CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo
 
