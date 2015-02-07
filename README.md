@@ -12,7 +12,7 @@ https://registry.hub.docker.com/u/mrrrgn/mozilla-centos6-x86_64/
 https://registry.hub.docker.com/u/mrrrgn/mozilla-centos6-x86_64-android/
 
 ##Linux 32
-Note: Setting this up was trucky. The environment is 64 bit; but you can "trick" programs into seeing a 32 bit system by prefixing all commands with `linux32`. This image is pointed at Mozilla's 32 bit mirror, so be sure to use that prefix before install packages.
+Note: Setting this up was trucky. The environment is 64 bit; but you can "trick" programs into seeing a 32 bit system by prefixing all commands with `linux32`. This image is pointed at Mozilla's 32 bit mirror, so be sure to use that prefix before installing packages.
 
 https://registry.hub.docker.com/u/mrrrgn/mozilla-centos-i386/
 
