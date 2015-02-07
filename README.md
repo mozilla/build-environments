@@ -3,8 +3,8 @@ Mozilla RelEng Linux Build Environments
 
 Mock configs and Dockerfiles for generating build environments, with packages installed from Mozilla's RelEng repositories.
 
-##Images published from docker.io:
-###Platform (no build specific libraries)
+##Images published to docker.io:
+###Platform: no build specific libraries
 
 ####Linux 64
 https://registry.hub.docker.com/u/mrrrgn/mozilla-centos6-x86_64/
@@ -16,7 +16,7 @@ https://registry.hub.docker.com/u/mrrrgn/mozilla-centos6-x86_64-android/
 Note: Setting this up was trucky. The environment is 64 bit; but you can "trick" programs into seeing a 32 bit system by prefixing all commands with `linux32`. This image is pointed at Mozilla's 32 bit mirror, so be sure to use that prefix before installing packages.
 
 https://registry.hub.docker.com/u/mrrrgn/mozilla-centos-i386/
-###Builders (with dependencies from <a href="https://github.com/mozilla/build-mozharness">Mozharness</a> configs)
+###Builders: with dependencies from <a href="https://github.com/mozilla/build-mozharness">Mozharness</a> configs
 
 :TODO:
 
