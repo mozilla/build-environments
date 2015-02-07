@@ -13,5 +13,5 @@ https://registry.hub.docker.com/u/mrrrgn/mozilla-centos6-x86_64/
 
 https://registry.hub.docker.com/u/mrrrgn/mozilla-centos6-x86_64-android/
 
-These containers may be useful for Firefox Developers, trying to debug issues which appear on our in house CI servers. For instance, you can be sure that you're using the same libraries and compilers:
+These containers may be useful for Firefox Developers trying to debug issues which appear on our in house CI servers. For instance, you can be sure that you're using the same libraries and compilers:
 <img src="yum.png"></img>
