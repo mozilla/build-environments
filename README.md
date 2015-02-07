@@ -1,7 +1,7 @@
 Mozilla RelEng Linux Build Environments
 =======================================
 
-Mock configs and Dockerfiles for generating build environments, with packages installed from Mozilla's RelEng repositories.For pre-baked docker containers see:
+Mock configs and Dockerfiles for generating build environments, with packages installed from Mozilla's RelEng repositories. For pre-baked docker containers see:
 
 ##Linux 64
 
