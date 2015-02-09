@@ -29,3 +29,4 @@ https://registry.hub.docker.com/u/mrrrgn/mozilla-centos-i386/
 ## About
 These containers may be useful for Firefox Developers trying to debug issues which appear on our in house CI servers. For instance, you can be sure that you're using the same libraries and compilers:
 <img src="yum.png"></img>
+<img src="env.png"></img>

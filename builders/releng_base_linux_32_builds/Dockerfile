@@ -79,3 +79,31 @@ RUN yum install -y \
     freetype-2.3.11-6.el6_1.8.i686\
     freetype-devel-2.3.11-6.el6_1.8.i686\
     freetype-2.3.11-6.el6_1.8.x86_64
+
+# all builds use ccache
+RUN mkdir -p /builds/ccache
+
+USER root
+
+ENV HG_SHARE_BASE_DIR /builds/hg-shared
+ENV LC_ALL C
+ENV CCACHE_COMPRESS 1
+ENV SYMBOL_SERVER_HOST %(symbol_server_host)s
+ENV CCACHE_DIR /builds/ccache
+ENV POST_SYMBOL_UPLOAD_CMD /usr/local/bin/post-symbol-upload.py
+ENV MOZ_AUTOMATION 1
+ENV SYMBOL_SERVER_SSH_KEY /home/mock_mozilla/.ssh/ffxbld_rsa
+ENV MOZBUILD_STATE_PATH /vagrant/docker/utils/compile_mozharness_config/.mozbuild
+ENV LD_LIBRARY_PATH /tools/gcc-4.3.3/installed/lib
+ENV PATH /tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
+ENV TINDERBOX_OUTPUT 1
+ENV TOOLTOOL_CACHE /builds/tooltool_cache
+ENV SYMBOL_SERVER_PATH /mnt/netapp/breakpad/symbols_ffx/
+ENV MOZ_OBJDIR obj-firefox
+ENV MOZ_CRASHREPORTER_NO_REPORT 1
+ENV SYMBOL_SERVER_USER ffxbld
+ENV TOOLTOOL_HOME /builds
+ENV DISPLAY :2
+ENV CCACHE_UMASK 002
+
+CMD /bin/bash

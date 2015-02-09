@@ -4,3 +4,12 @@ MAINTAINER  Morgan Reece Phillips winter2718@gmail.com
 RUN yum update -y
 RUN yum install -y \{% for pkg in mock_packages %}
     {{ pkg }}{% if pkg != mock_packages[-1] %}\{% endif %}{% endfor %}{% endif %}
+
+# all builds use ccache
+RUN mkdir -p /builds/ccache
+
+USER root
+{% for key, value in env.items() %}
+ENV {{ key }} {{ value }}{% endfor %}
+
+CMD /bin/bash
