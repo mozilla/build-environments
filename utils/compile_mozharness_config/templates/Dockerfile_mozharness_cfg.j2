@@ -9,6 +9,7 @@ RUN yum install -y \{% for pkg in mock_packages %}
 RUN mkdir -p /builds/ccache
 
 USER root
+ENV SHELL /bin/bash
 {% for key, value in env.items() %}
 ENV {{ key }} {{ value }}{% endfor %}
 
