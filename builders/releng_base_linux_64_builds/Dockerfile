@@ -53,6 +53,7 @@ RUN yum install -y \
 RUN mkdir -p /builds/ccache
 
 USER root
+ENV SHELL /bin/bash
 
 ENV HG_SHARE_BASE_DIR /builds/hg-shared
 ENV LC_ALL C
