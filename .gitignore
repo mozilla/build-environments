@@ -1,3 +1,5 @@
 .ropeproject
 *.egg*
 build-mozharness
+mozharness
+*.swp
