@@ -54,6 +54,7 @@ RUN mkdir -p /builds/ccache
 
 USER root
 ENV SHELL /bin/bash
+
 ENV HG_SHARE_BASE_DIR /builds/hg-shared
 ENV LC_ALL C
 ENV CCACHE_COMPRESS 1
