@@ -21,6 +21,7 @@ MOZHARNESS_DIR="/tmp/mozharness"
 TEMPLATE="Dockerfile_mozharness_cfg.j2"
 
 for build in $(ls ${BUILDERS_DIR}); do
+    # find all of the mozharness configs with a correspondiner builders sub-dir
     mozharness_config=$(find ${MOZHARNESS_DIR}/configs -name ${build}.py)
     compile_mozharness_config/compile_mozharness_config.py \
         ${mozharness_config} compile_mozharness_config/templates/${TEMPLATE} | \

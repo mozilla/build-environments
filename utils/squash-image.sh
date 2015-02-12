@@ -7,6 +7,7 @@ set -eux
 
 if [ ! $# -gt 1 ]; then
     echo "Usage: ./squash-image.sh <image> [docker-squash options| ...]"
+    exit
 fi
 
 docker save $1 > image.tar

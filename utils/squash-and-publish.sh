@@ -9,6 +9,7 @@ set -eux
 
 if [ $# -lt 1 ]; then
     echo "Usage: squash-and-publish.sh <docker_prefix: e.g mrrrgn>"
+    exit
 fi
 
 pushd $(dirname "${BASH_SOURCE[0]}")
