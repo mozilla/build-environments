@@ -1,5 +1,3 @@
-publish: generate_dockerfiles
-	utils/squash-and-publish.sh
-
-generate_dockerfiles:
+all:
 	utils/generate-builder-dockerfiles.sh
+	utils/squash-and-publish.sh
