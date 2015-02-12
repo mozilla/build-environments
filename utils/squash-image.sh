@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# do all of the docker squash steps....
+# do all of the docker squash steps.
+# REQUIRES: docker-squash: https://github.com/jwilder/docker-squash
 
 if [ ! $# -gt 1 ]; then
     echo "Usage: ./squash-image.sh <image> [docker-squash options| ...]"
