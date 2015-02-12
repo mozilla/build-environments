@@ -11,11 +11,12 @@ if [ $# -lt 1 ]; then
     echo "Usage: squash-and-publish.sh <docker_prefix: e.g mrrrgn>"
 fi
 
+pushd $(dirname "${BASH_SOURCE[0]}")
+
 # isolate Dockerfiles which appear to have changed recently
 MODIFIED_BUILDERS=$(git status | awk /Dockerfile/ | awk '{print $2}')
 
 BUILDERS_DIR="../builders"
-pushd $(dirname "${BASH_SOURCE[0]}")
 for build in ${MODIFIED_BUILDERS}; do
     builder_dir=$(dirname ${build} -z)
     builder_name=$(echo ${builder_dir} | awk -F "/" '{print $NF}')
