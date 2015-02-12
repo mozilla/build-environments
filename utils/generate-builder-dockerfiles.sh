@@ -8,7 +8,6 @@ set -eux
 
 # grab an up-to-date copy of mozharness for the configs
 MOZHARNESS_URL="https://hg.mozilla.org/build/mozharness"
-
 pushd /tmp
 hg clone ${MOZHARNESS_URL} mozharness || \
     (cd mozharness && hg pull && hg update)
@@ -19,7 +18,6 @@ pushd $(dirname "${BASH_SOURCE[0]}")
 
 BUILDERS_DIR="../builders"
 MOZHARNESS_DIR="/tmp/mozharness"
-
 TEMPLATE="Dockerfile_mozharness_cfg.j2"
 
 for build in $(ls ${BUILDERS_DIR}); do
