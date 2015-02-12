@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eux
+
 # do all of the docker squash steps.
 # REQUIRES: docker-squash: https://github.com/jwilder/docker-squash
 
