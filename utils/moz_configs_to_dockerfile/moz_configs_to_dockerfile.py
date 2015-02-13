@@ -24,9 +24,12 @@ if __name__ == '__main__':
     import sys
 
     if len(sys.argv) < 3:
-        print('Usage: compile_mozharness_config.py <mozharness config> <jinja2 template>')
+        print('Usage: compile_mozharness_config.py <jinja2 template>'
+              ' <mozharness config ... >')
         sys.exit()
 
-    config_vars = parse_config_file(sys.argv[1])
-    template_file = os.path.abspath(sys.argv[2])
+    template_file = os.path.abspath(sys.argv[1])
+    config_vars = {}
+    for moz_config in sys.argv[2:]:
+        config_vars.update(parse_config_file(moz_config))
     print(compile_template(config_vars, template_file))
