@@ -1,4 +1,4 @@
-MOZHARNESS := /tmp/mozharness
+MOZHARNESS := ../../mozharness
 MOZCONFIGS := ${MOZHARNESS}/configs/builds/releng_base_linux_32_builds.py
 
 COMPILER_DIR := ../../utils/moz_configs_to_dockerfile
