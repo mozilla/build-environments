@@ -1,13 +1,15 @@
-FROM centos:6
+FROM gpmidi/centos-6.1
 
 MAINTAINER Morgan Reece Phillips winter2718@gmail.com
 
 # Setup mozilla repositories
 ADD yum.conf /etc/yum.conf
 
-RUN yum -x make update -y
+RUN yum update -y
 # Prefixing with `linux32` ensures that anything new we get is 32-bit
-RUN linux32 yum install -y bash\
+RUN yum install -y \
+    make\
+    bash\
     bzip2\
     coreutils\
     cpio\
