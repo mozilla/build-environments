@@ -15,7 +15,7 @@ fi
 pushd $(dirname "${BASH_SOURCE[0]}")
 
 # isolate Dockerfiles which appear to have changed recently
-MODIFIED_BUILDERS=$(git status | awk /Dockerfile/ | awk '{print $2}')
+MODIFIED_BUILDERS=$(git status | awk /Dockerfile/ | awk '{print $2}' | sort -r)
 
 BUILDERS_DIR="../builders"
 for build in ${MODIFIED_BUILDERS}; do
