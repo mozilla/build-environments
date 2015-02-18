@@ -10,3 +10,5 @@ if [ ! $# -gt 1 ]; then
 fi
 ID=$(docker run -d $1 /bin/bash)
 docker export $ID | docker import - $2
+docker kill $ID || true
+docker rm $ID

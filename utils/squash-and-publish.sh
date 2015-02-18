@@ -29,7 +29,7 @@ for build in ${MODIFIED_BUILDERS}; do
     popd
 
     # squash that sucker
-    ./squash-image.sh ${builder_name}_unsquashed -t "$1/${builder_name}"
+    ./squash-image.sh ${builder_name}_unsquashed "$1/${builder_name}"
 
     # remove the unsquashed image
     docker rmi ${builder_name}_unsquashed
