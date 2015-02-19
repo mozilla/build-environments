@@ -94,7 +94,7 @@ ENV CCACHE_DIR /builds/ccache
 ENV POST_SYMBOL_UPLOAD_CMD /usr/local/bin/post-symbol-upload.py
 ENV MOZ_AUTOMATION 1
 ENV SYMBOL_SERVER_SSH_KEY /home/mock_mozilla/.ssh/ffxbld_rsa
-ENV MOZBUILD_STATE_PATH /vagrant/docker/builders/releng_base_linux_32_builds/.mozbuild
+ENV MOZBUILD_STATE_PATH /vagrant/build-environments/builders/releng_base_linux_32_builds/.mozbuild
 ENV LD_LIBRARY_PATH /tools/gcc-4.3.3/installed/lib
 ENV PATH /tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
 ENV TINDERBOX_OUTPUT 1

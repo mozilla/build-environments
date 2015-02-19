@@ -67,7 +67,7 @@ ENV CCACHE_COMPRESS 1
 ENV TOOLTOOL_HOME /builds
 ENV DISPLAY :2
 ENV CCACHE_UMASK 002
-ENV MOZBUILD_STATE_PATH /vagrant/docker/builders/64_code_coverage/.mozbuild
+ENV MOZBUILD_STATE_PATH /vagrant/build-environments/builders/64_code_coverage/.mozbuild
 ENV CCACHE_DIR /builds/ccache
 
 CMD /bin/bash

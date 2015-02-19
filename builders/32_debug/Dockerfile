@@ -97,7 +97,7 @@ ENV CCACHE_COMPRESS 1
 ENV DISPLAY :2
 ENV CCACHE_UMASK 002
 ENV XPCOM_DEBUG_BREAK stack-and-abort
-ENV MOZBUILD_STATE_PATH /vagrant/docker/builders/32_debug/.mozbuild
+ENV MOZBUILD_STATE_PATH /vagrant/build-environments/builders/32_debug/.mozbuild
 ENV LD_LIBRARY_PATH /tools/gcc-4.3.3/installed/lib:obj-firefox/dist/bin
 ENV MOZ_CRASHREPORTER_NO_REPORT 1
 

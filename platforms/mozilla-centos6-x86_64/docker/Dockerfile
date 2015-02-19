@@ -1,4 +1,4 @@
-FROM centos:6
+FROM gpmidi/centos-6.1
 
 MAINTAINER Morgan Reece Phillips winter2718@gmail.com
 

@@ -68,7 +68,7 @@ ENV TOOLTOOL_HOME /builds
 ENV DISPLAY :2
 ENV CCACHE_UMASK 002
 ENV XPCOM_DEBUG_BREAK stack-and-abort
-ENV MOZBUILD_STATE_PATH /vagrant/docker/builders/64_stat_and_debug/.mozbuild
+ENV MOZBUILD_STATE_PATH /vagrant/build-environments/builders/64_stat_and_debug/.mozbuild
 ENV CCACHE_DIR /builds/ccache
 
 CMD /bin/bash

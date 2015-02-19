@@ -15,7 +15,7 @@ fi
 pushd $(dirname "${BASH_SOURCE[0]}")
 
 # isolate Dockerfiles which appear to have changed recently
-MODIFIED_BUILDERS=$(git status | awk /Dockerfile/ | awk '{print $2}')
+MODIFIED_BUILDERS=$(git status | awk /Dockerfile/ | awk '{print $2}' | sort -r)
 
 BUILDERS_DIR="../builders"
 for build in ${MODIFIED_BUILDERS}; do
@@ -29,7 +29,7 @@ for build in ${MODIFIED_BUILDERS}; do
     popd
 
     # squash that sucker
-    ./squash-image.sh ${builder_name}_unsquashed -t "$1/${builder_name}"
+    ./squash-image.sh ${builder_name}_unsquashed "$1/${builder_name}"
 
     # remove the unsquashed image
     docker rmi ${builder_name}_unsquashed
